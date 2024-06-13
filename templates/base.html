@@ -15,15 +15,12 @@
 </head>
 
 <style>
-{% block style %}{% endblock style %}
+/* {% block style %}{% endblock style %} */
 </style>
 <body>
 
-  <div class="header" style="   background: rgb(78, 164, 221)  no-repeat fixed center
-  {% if "appointment" in request.path %}
-  max-height:70px!important;min-height:70px!important;
-  {% endif %}
-  ">
+  <div class="header" style="   background: rgb(78, 164, 221)  no-repeat fixed center;
+  {% if "appointment" in request.path %}  max-height:70px!important;min-height:70px!important; {% endif %} ">
     
     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search sticky-top fixed-top">
         <div class="container"><a class="navbar-brand" href="{% url 'home' %}">Health</a>
@@ -67,9 +64,6 @@
 
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
   
- <script>
-    {% block script %}{% endblock script %}
- </script>
 </body>
 
 </html>
